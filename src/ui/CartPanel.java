@@ -30,7 +30,7 @@ public class CartPanel extends JPanel {
 
         setLayout(new BorderLayout(10, 10));
         
-        // Create custom titled border with icon
+     
         JPanel headerPanel = new JPanel(new FlowLayout(FlowLayout.LEFT, 5, 5));
         headerPanel.setBackground(new Color(245, 245, 245));
         
@@ -44,7 +44,7 @@ public class CartPanel extends JPanel {
         setBorder(BorderFactory.createTitledBorder(""));
         setBackground(new Color(245, 245, 245));
         
-        // Add header panel at the top
+       
         add(headerPanel, BorderLayout.NORTH);
 
         listModel = new DefaultListModel<>();
@@ -53,7 +53,7 @@ public class CartPanel extends JPanel {
 
         JScrollPane scrollPane = new JScrollPane(cartList);
         
-        // Create a panel to hold the cart list
+        
         JPanel cartContentPanel = new JPanel(new BorderLayout());
         cartContentPanel.add(scrollPane, BorderLayout.CENTER);
         
@@ -98,7 +98,7 @@ public class CartPanel extends JPanel {
                             if (newQuantityStr != null) {
                                 int newQuantity = Integer.parseInt(newQuantityStr);
                                 cartService.updateQuantity(selectedItem.getProduct().getId(), newQuantity);
-                                // แก้ไขส่วนนี้: เรียกเมธอด updateCartView() ของคลาสแม่
+                                
                                 updateCartView();
                             }
                         } catch (NumberFormatException ex) {
@@ -159,7 +159,7 @@ public class CartPanel extends JPanel {
     }
 
     static {
-        // Set global UIManager fonts for dialogs to support Thai characters
+        
         java.util.Enumeration<Object> keys = UIManager.getDefaults().keys();
         while (keys.hasMoreElements()) {
             Object key = keys.nextElement();
