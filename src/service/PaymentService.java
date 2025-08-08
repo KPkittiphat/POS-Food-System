@@ -37,7 +37,7 @@ public class PaymentService {
         // Items
         for (OrderItem item : order.getItems()) {
             String productName = item.getProduct().getName();
-            // No need to truncate the product name now that the width is increased.
+         
             receipt.append(String.format("%-20s %-8d %12.2f\n",
                     productName,
                     item.getQuantity(),

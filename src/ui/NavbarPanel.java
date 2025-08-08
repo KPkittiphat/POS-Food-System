@@ -37,7 +37,7 @@ public class NavbarPanel extends JPanel {
             button.setIcon(icon);
         }
 
-        // Add mouse hover effects
+        
         button.addMouseListener(new MouseAdapter() {
             private Color originalBackground = button.getBackground();
 
